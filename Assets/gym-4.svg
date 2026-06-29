@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Functional fitness area">
+  <rect width="1200" height="800" fill="#2A2E34"/>
+  <path d="M200 520 Q400 280 600 520 T1000 520" fill="none" stroke="#F5B301" stroke-width="18" stroke-linecap="round"/>
+  <rect x="280" y="340" width="60" height="60" rx="8" fill="#FED053"/>
+  <rect x="860" y="340" width="60" height="60" rx="8" fill="#FED053"/>
+  <circle cx="600" cy="380" r="50" fill="#3B3F46" stroke="#F5B301" stroke-width="6"/>
+  <text x="600" y="660" fill="#F5B301" font-family="Arial,sans-serif" font-size="42" font-weight="bold" text-anchor="middle">FUNCTIONAL FITNESS</text>
+</svg>

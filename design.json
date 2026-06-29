@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "project": "Anytime Fitness Jaipur – C-Scheme Location Page",
+    "description": "Design spec for a gym location landing page. Build a single-page layout with all sections listed below.",
+    "sourceUrl": "https://www.anytimefitness.com/en-in/locations/jaipur-rajasthan-in-1037"
+  },
+
+  "colors": {
+    "bg_darkest": "#1E2328",
+    "bg_dark": "#2A2E34",
+    "bg_card": "#3B3F46",
+    "bg_card_alt": "#3B3F46",
+    "accent_primary": "#F5B301",
+    "accent_secondary": "#FED053",
+    "text_primary": "#FFFFFF",
+    "text_muted": "#B0B5BC",
+    "text_on_accent": "#1E2328"
+  },
+
+  "typography": {
+    "font_heading": "Montserrat, sans-serif",
+    "font_body": "Inter, sans-serif",
+    "scale": {
+      "hero_title": "3.5rem / bold / uppercase / tracking-wider",
+      "section_title": "2rem / bold / uppercase",
+      "card_title": "1.125rem / semibold",
+      "body": "1rem / regular / line-height 1.6",
+      "label": "0.75rem / semibold / uppercase / tracking-widest",
+      "button": "0.875rem / bold / uppercase / tracking-widest"
+    }
+  },
+
+  "layout": {
+    "max_width": "1200px",
+    "container_padding": "0 24px",
+    "section_vertical_padding": "80px 0"
+  },
+
+  "sections": [
+    {
+      "id": "navbar",
+      "type": "navigation",
+      "background": "#1E2328",
+      "sticky": true,
+      "logo": {
+        "text": "ANYTIME FITNESS",
+        "color": "#FFFFFF",
+        "note": "Use white logo on dark navbar"
+      },
+      "links": [
+        { "label": "Find a Gym", "href": "#" },
+        { "label": "Training", "href": "#" },
+        { "label": "Blog", "href": "#" },
+        { "label": "Why Join", "href": "#" },
+        { "label": "Own a Gym", "href": "#" }
+      ],
+      "cta": {
+        "label": "TRY US FREE",
+        "style": "pill_button",
+        "background": "#F5B301",
+        "text_color": "#1E2328"
+      }
+    },
+
+    {
+      "id": "hero",
+      "type": "hero_split",
+      "background": "#1E2328",
+      "layout": "left_text_right_image_grid",
+      "badge": {
+        "text": "Open to Members",
+        "style": "pill",
+        "background": "#F5B301",
+        "text_color": "#1E2328"
+      },
+      "heading": "Jaipur, C-Scheme",
+      "subheading": "5th Floor, City Mall, C21-B, Bhagwan Das Road, C-Scheme, Ashok Nagar, Jaipur, Rajasthan 302001",
+      "phone": "+91 92160 55342",
+      "ctas": [
+        {
+          "label": "TRY US FREE",
+          "style": "filled",
+          "background": "#F5B301",
+          "text_color": "#1E2328"
+        },
+        {
+          "label": "MEMBERSHIP INQUIRY",
+          "style": "outline",
+          "border_color": "#F5B301",
+          "text_color": "#F5B301"
+        }
+      ],
+      "image_grid": {
+        "layout": "3_images_collage",
+        "images": [
+          {
+            "alt": "Woman using a rowing machine",
+            "src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/6a0f1cab105988e1190db597_Local%20landing%20page%20-%20Image%201.webp"
+          },
+          {
+            "alt": "Two men doing kettlebell squats",
+            "src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/6a0f1cb3e6cadca1acc0e477_Local%20landing%20page%20-%20Image%202.webp"
+          },
+          {
+            "alt": "Two women sitting on a gym bench smiling",
+            "src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/6a0f1cb38f41828c87bbc13d_Local%20landing%20page%20-%20Image%203.webp"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "jump_nav",
+      "type": "sticky_anchor_bar",
+      "background": "#2A2E34",
+      "border_bottom": "2px solid #F5B301",
+      "links": [
+        { "label": "Equipment & Amenities", "anchor": "#amenities" },
+        { "label": "Membership Plans", "anchor": "#plans" },
+        { "label": "Gym Announcements", "anchor": "#announcements" },
+        { "label": "Why Anytime Fitness", "anchor": "#why-af" }
+      ],
+      "link_style": {
+        "color": "#B0B5BC",
+        "active_color": "#F5B301",
+        "font": "0.8rem / semibold / uppercase / tracking-widest"
+      }
+    },
+
+    {
+      "id": "gym_intro",
+      "type": "intro_with_stats",
+      "background": "#1E2328",
+      "heading": "Your Gym in Jaipur, C-Scheme, Rajasthan",
+      "subheading": "Offering personalized coaching services to reach your goals.",
+      "stats": [
+        {
+          "icon": "checkmark",
+          "icon_color": "#F5B301",
+          "title": "Open 24 Hours",
+          "description": "Convenience to fit your schedule"
+        },
+        {
+          "icon": "checkmark",
+          "icon_color": "#F5B301",
+          "title": "Global Access",
+          "description": "5,800+ gyms worldwide"
+        },
+        {
+          "icon": "checkmark",
+          "icon_color": "#F5B301",
+          "title": "Personalized Fitness Plans",
+          "description": "Tailored to your goals"
+        }
+      ]
+    },
+
+    {
+      "id": "amenities",
+      "type": "amenities_grid",
+      "anchor": "amenities",
+      "background": "#2A2E34",
+      "heading": "Gym Equipment & Amenities",
+      "categories": [
+        {
+          "name": "Cardio",
+          "color": "#F5B301",
+          "items": [
+            "Elliptical Cross-trainers",
+            "Exercise Cycles",
+            "Rowing Machines",
+            "Spin Bikes",
+            "Treadmills"
+          ]
+        },
+        {
+          "name": "Strength / Free Weights",
+          "color": "#FED053",
+          "items": [
+            "Barbells",
+            "Dumbbells",
+            "Free Weights",
+            "Plate Loaded",
+            "Squat Racks"
+          ]
+        },
+        {
+          "name": "Functional Training",
+          "color": "#F5B301",
+          "items": [
+            "Battle Ropes",
+            "Dumbbells",
+            "Kettlebells",
+            "Medicine Balls",
+            "Multi-Functional Rack",
+            "Plyometric Boxes",
+            "Resistance Bands",
+            "TRX"
+          ]
+        },
+        {
+          "name": "Training & Coaching",
+          "color": "#FED053",
+          "items": [
+            "Fitness Assessment",
+            "Personal Training",
+            "Small Group Training",
+            "Specialized Classes",
+            "Wellness Programs",
+            "Yoga"
+          ]
+        },
+        {
+          "name": "Gym Amenities",
+          "color": "#F5B301",
+          "items": [
+            "24-Hour Security",
+            "Classes",
+            "Convenient Parking",
+            "Group Classes",
+            "HDTVs",
+            "Private Restrooms",
+            "Private Showers",
+            "Worldwide Club Access"
+          ]
+        }
+      ],
+      "card_style": {
+        "background": "#3B3F46",
+        "border_radius": "12px",
+        "padding": "24px",
+        "heading_color": "#F5B301",
+        "item_color": "#FFFFFF",
+        "item_bullet": "•"
+      }
+    },
+
+    {
+      "id": "plans",
+      "type": "membership_cta",
+      "anchor": "plans",
+      "background": "#1E2328",
+      "heading": "Gym Membership Plans for Jaipur, C-Scheme",
+      "subheading": "We have a range of membership options available. Visit our club — we'll work with you to find the option that fits best.",
+      "cta": {
+        "label": "MEMBERSHIP INQUIRY",
+        "style": "filled",
+        "background": "#F5B301",
+        "text_color": "#1E2328"
+      },
+      "note": "No pricing listed publicly — inquiry-based"
+    },
+
+    {
+      "id": "announcements",
+      "type": "about_club",
+      "anchor": "announcements",
+      "background": "#2A2E34",
+      "heading": "Jaipur, C-Scheme — You've got this. And we've got you.",
+      "body": "At Anytime Fitness Jaipur, C-Scheme, your "gym near me" search ends here. As part of one of India's fastest-growing gym chains, we offer a clean, motivating space built for real results. With certified trainers, personalized guidance, and flexible hours, fitness fits seamlessly into everyday life. Plus, with access to multiple Anytime Fitness gyms across India and globally, your routine stays uninterrupted, wherever you go.",
+      "office_hours": {
+        "heading": "Office Hours",
+        "note": "Our gym is always ready for you! Stop in during office hours to talk to our team about membership options.",
+        "schedule": [
+          { "day": "Monday", "hours": "Office Closed" },
+          { "day": "Tuesday", "hours": "Office Closed" },
+          { "day": "Wednesday", "hours": "Office Closed" },
+          { "day": "Thursday", "hours": "Office Closed" },
+          { "day": "Friday", "hours": "Office Closed" },
+          { "day": "Saturday", "hours": "Office Closed" },
+          { "day": "Sunday", "hours": "Office Closed" }
+        ],
+        "style": {
+          "background": "#3B3F46",
+          "border_radius": "12px",
+          "day_color": "#B0B5BC",
+          "hours_color": "#FFFFFF",
+          "closed_color": "#F5B301"
+        }
+      }
+    },
+
+    {
+      "id": "team",
+      "type": "staff_grid",
+      "background": "#1E2328",
+      "heading": "Our Team Is Here For You",
+      "subheading": "Our approach to coaching is focused on you, not the other way around.",
+      "card_style": {
+        "background": "#2A2E34",
+        "border_radius": "12px",
+        "avatar_shape": "circle",
+        "avatar_border": "3px solid #F5B301",
+        "name_color": "#FFFFFF",
+        "role_color": "#F5B301",
+        "bio_color": "#B0B5BC",
+        "role_label_size": "0.75rem / uppercase / tracking-widest"
+      },
+      "staff": [
+        {
+          "first_name": "Mukesh",
+          "last_name": "Chouhan",
+          "role": "Trainer",
+          "bio": "Mastery in fat/weight loss, muscle building, strength training, and flexibility. Specialized in HIIT programs.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/e84ad626-9b7b-47c0-b7bb-2c364fb1b37b.jpg"
+        },
+        {
+          "first_name": "Karamjeet",
+          "last_name": "Kaur",
+          "role": "Trainer",
+          "bio": "Certified personal trainer specializing in strength training, weight management, and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/ebda4f62-5dfc-42a9-97f4-146ba30c85ce.png"
+        },
+        {
+          "first_name": "Abid",
+          "last_name": "Khan",
+          "role": "Trainer",
+          "bio": "Certified personal trainer focused on strength training, weight management, and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/04c55cf0-02f6-453f-97a0-f0d5ffa9c59b.jpg"
+        },
+        {
+          "first_name": "Faraz",
+          "last_name": "Khan",
+          "role": "Trainer",
+          "bio": "Certified personal trainer dedicated to personalized training with expertise in strength and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/ebbf9ec7-5156-413c-b8bc-0adb310d49c4.jpg"
+        },
+        {
+          "first_name": "Manish",
+          "last_name": "Kumar",
+          "role": "Trainer",
+          "bio": "Skilled personal trainer with a strong background in strength development, weight control, and functional training.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/ef3d7cb7-eaee-48ba-b341-0a858d307dab.png"
+        },
+        {
+          "first_name": "Devendra",
+          "last_name": "Kumawat",
+          "role": "Trainer",
+          "bio": "Proficient in muscle gaining, strength building, fat loss, diet planning, power and weightlifting, endurance, and flexibility.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/a7bcb796-6c65-4f99-a66a-c4ded4dd73fc.jpg"
+        },
+        {
+          "first_name": "Sanjay",
+          "last_name": "Meena",
+          "role": "Trainer",
+          "bio": "Expert in personalized training, nutrition guidance, fat and weight loss programs, and muscle gain.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/de74d129-1dc2-47df-bfbc-8cf0f7c608d4.JPG"
+        },
+        {
+          "first_name": "Abhishek",
+          "last_name": "Sharma",
+          "role": "Trainer",
+          "bio": "Certified personal trainer focused on strength, weight loss, and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/7f76771e-0dc9-420e-a89a-7f5a293fd2f3.jpg"
+        },
+        {
+          "first_name": "Kartik",
+          "last_name": "Sharma",
+          "role": "Trainer",
+          "bio": "Certified personal trainer specializing in strength training, weight management, and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/42339e6a-a9cc-48b6-ae67-9d26032af0ee.jpg"
+        },
+        {
+          "first_name": "Karani Singh",
+          "last_name": "Nitharwal",
+          "role": "Trainer",
+          "bio": "Certified personal trainer with expertise in strength training, weight loss, and functional fitness.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/db844532-2a40-4fc1-a1d0-b799507979f7.jpg"
+        },
+        {
+          "first_name": "Monu",
+          "last_name": "Rathore",
+          "role": "Counsellor",
+          "bio": "Friendly and reliable counsellor ensuring every member feels welcomed and supported throughout their fitness journey.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/645812e9-3a09-474f-a6ef-943ac7ee10b0.jpg"
+        },
+        {
+          "first_name": "Gunjan",
+          "last_name": "Verma",
+          "role": "Counsellor",
+          "bio": "Friendly and knowledgeable counsellor helping members feel welcome, supported, and motivated.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/5ae845df-13d2-4bba-bcc8-9960bf811e51.jpg"
+        },
+        {
+          "first_name": "Vijay",
+          "last_name": "Baadoliya",
+          "role": "Club Manager",
+          "bio": "Club Manager known for leadership, efficiency, and a member-first approach ensuring smooth daily operations.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/455b9733-c629-4f9e-ac8d-e67d38fe1f32.jpg"
+        },
+        {
+          "first_name": "Shubham",
+          "last_name": "Chauhan",
+          "role": "Manager",
+          "bio": "Dedicated trainer committed to helping clients build strength and achieve their fitness goals through customized training.",
+          "avatar_src": "https://anytimefitness.blob.core.windows.net/user-photos-new/57f95636-e320-4c79-a2f7-26c58d3615ed.png"
+        }
+      ]
+    },
+
+    {
+      "id": "why_af",
+      "type": "feature_cards_3col",
+      "anchor": "why-af",
+      "background": "#2A2E34",
+      "heading": "We offer more than machines",
+      "cards": [
+        {
+          "image_src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/683708a77596f459279356ee_682ef6ca44c8911d307fcb7a_we%20offer%20more%20thAn%20machines1%20(1)%20(1).webp",
+          "image_alt": "Woman doing squats with others",
+          "title": "Personalized Plans",
+          "description": "Hiking Kilimanjaro? Running a local 5K? Whatever you want to achieve, we've got a plan to get you there."
+        },
+        {
+          "image_src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/6778771ac047ce33d1c85344_e032b5e6e4121eafc50036167cfa8836.avif",
+          "image_alt": "Coach holding up dumbbells",
+          "title": "Supportive Coaches",
+          "description": "Our coaches meet you where you are, to get you where you want to be. Real people helping you make real progress."
+        },
+        {
+          "image_src": "https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/682ef6e50868279b6452105c_we%20offer%20more%20thAn%20machines3%20(1).avif",
+          "image_alt": "Two people stretching outside",
+          "title": "Anytime, Anywhere",
+          "description": "24/7 access to thousands of locations worldwide, and a new app for when fitness inspiration strikes."
+        }
+      ],
+      "card_style": {
+        "background": "#3B3F46",
+        "border_radius": "16px",
+        "image_aspect_ratio": "16/9",
+        "image_border_radius": "12px 12px 0 0",
+        "title_color": "#F5B301",
+        "description_color": "#B0B5BC",
+        "padding": "24px"
+      }
+    },
+
+    {
+      "id": "cta_banner",
+      "type": "full_width_cta",
+      "background": "#F5B301",
+      "heading": "We're ready when you are.",
+      "heading_color": "#1E2328",
+      "ctas": [
+        {
+          "label": "TRY US FREE",
+          "style": "filled",
+          "background": "#1E2328",
+          "text_color": "#F5B301"
+        },
+        {
+          "label": "MEMBERSHIP INQUIRY",
+          "style": "outline",
+          "border_color": "#1E2328",
+          "text_color": "#1E2328"
+        }
+      ]
+    },
+
+    {
+      "id": "location_info",
+      "type": "location_map_strip",
+      "background": "#2A2E34",
+      "gym_name": "Anytime Fitness Jaipur, C-Scheme",
+      "address": "5th Floor, City Mall, C21-B, Bhagwan Das Road, C-Scheme, Ashok Nagar, Jaipur, Rajasthan 302001",
+      "phone": "+91 92160 55342",
+      "map_note": "Embed a Google Maps iframe centred on: 26.9124° N, 75.7873° E",
+      "quick_links": [
+        { "label": "Contact Us", "href": "#" },
+        { "label": "Send Feedback", "href": "#" },
+        { "label": "Ask a Question", "href": "#" }
+      ],
+      "tags": [
+        "Under 18 Approved",
+        "Corporate Memberships",
+        "Male Access Compliant",
+        "Ladies Access Compliant",
+        "Cardio Equipment",
+        "Strength Equipment"
+      ],
+      "tag_style": {
+        "background": "#3B3F46",
+        "text_color": "#FED053",
+        "border_radius": "999px",
+        "padding": "4px 14px",
+        "font": "0.75rem / semibold"
+      },
+      "social_links": [
+        { "platform": "Facebook", "href": "https://www.facebook.com/ATFitnessIN/" },
+        { "platform": "Instagram", "href": "https://www.instagram.com/anytimefitnesssin/" },
+        { "platform": "Twitter", "href": "https://twitter.com/ATFitnessIN" },
+        { "platform": "LinkedIn", "href": "https://www.linkedin.com/company/anytime-fitness-india/" },
+        { "platform": "YouTube", "href": "https://www.youtube.com/@AnytimeFitnessIndiaATFITNESSIN" }
+      ]
+    },
+
+    {
+      "id": "footer",
+      "type": "footer",
+      "background": "#1E2328",
+      "border_top": "1px solid #3B3F46",
+      "logo_color": "purple_black",
+      "columns": [
+        {
+          "heading": "COMPANY",
+          "links": [
+            { "label": "Media", "href": "#" },
+            { "label": "Careers", "href": "#" },
+            { "label": "Privacy Policy", "href": "#" },
+            { "label": "Terms & Conditions", "href": "#" },
+            { "label": "Franchise Opportunities", "href": "#" },
+            { "label": "Sitemap", "href": "#" }
+          ]
+        },
+        {
+          "heading": "GYMS",
+          "links": [
+            { "label": "Find a Gym", "href": "#" },
+            { "label": "Own a Gym", "href": "#" },
+            { "label": "View All Gyms", "href": "#" },
+            { "label": "Franchise Login", "href": "#" }
+          ]
+        },
+        {
+          "heading": "MEMBERS",
+          "links": [
+            { "label": "The Anytime Fitness App", "href": "#" },
+            { "label": "FAQs", "href": "#" },
+            { "label": "Contact Us", "href": "#" },
+            { "label": "Corporate Membership", "href": "#" }
+          ]
+        }
+      ],
+      "app_download": {
+        "heading": "Download Our App",
+        "app_store_href": "https://apps.apple.com/us/app/af-app/id1598355340",
+        "google_play_href": "https://play.google.com/store/apps/details?id=com.anytimefitness.userapp"
+      },
+      "copyright": "© Anytime Fitness 2026. All rights reserved.",
+      "link_color": "#B0B5BC",
+      "link_hover_color": "#F5B301",
+      "heading_color": "#FED053"
+    }
+  ],
+
+  "components": {
+    "button_primary": {
+      "background": "#F5B301",
+      "text_color": "#1E2328",
+      "border_radius": "999px",
+      "padding": "14px 32px",
+      "font": "0.875rem / bold / uppercase / tracking-widest",
+      "hover_background": "#FED053"
+    },
+    "button_outline": {
+      "background": "transparent",
+      "border": "2px solid #F5B301",
+      "text_color": "#F5B301",
+      "border_radius": "999px",
+      "padding": "14px 32px",
+      "font": "0.875rem / bold / uppercase / tracking-widest",
+      "hover_background": "#F5B301",
+      "hover_text_color": "#1E2328"
+    },
+    "section_label": {
+      "font": "0.7rem / semibold / uppercase / tracking-widest",
+      "color": "#F5B301",
+      "margin_bottom": "8px"
+    }
+  },
+
+  "cursor_instructions": {
+    "framework": "Plain HTML + CSS (or React if preferred)",
+    "notes": [
+      "Use the colors object as CSS custom properties (--bg-darkest, --accent-primary, etc.).",
+      "Each section in the sections array maps to a <section> element with its id as the HTML id attribute.",
+      "All buttons use the border-radius:999px pill shape from components.",
+      "The sticky jump_nav should highlight the active anchor on scroll.",
+      "Staff cards in the team section should show avatar, name, role badge, and a short bio.",
+      "Amenity items in the amenities section should be grouped by category with colored headings.",
+      "Images can be loaded from the src URLs provided — they are publicly accessible.",
+      "The map in location_info can use a static Google Maps embed iframe.",
+      "Keep the page responsive — stack columns to single column on mobile."
+    ]
+  }
+}
