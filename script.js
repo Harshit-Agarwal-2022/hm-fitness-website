@@ -5,13 +5,13 @@
   const PHONE_DISPLAY = '+91 85020 39982';
   const WHATSAPP_URL = 'https://wa.me/918502039982?text=';
 
-  /* Edit image paths here — all .png files in assets/ */
+  /* Edit image paths here — all .png files in Assets/ */
   const GYM_IMAGES = [
-    { src: 'assets/Screenshot 2026-06-29 143651.png', alt: 'HM Fitness gym — training area' },
-    { src: 'assets/Screenshot 2026-06-29 143734.png', alt: 'HM Fitness gym — equipment zone' },
-    { src: 'assets/Screenshot 2026-06-29 143812.png', alt: 'HM Fitness gym — workout space' },
-    { src: 'assets/Screenshot 2026-06-29 144018.png', alt: 'HM Fitness gym — fitness floor' },
-    { src: 'assets/Screenshot 2026-06-29 144050.png', alt: 'HM Fitness gym — member area' }
+    { src: 'Assets/img1.png', alt: 'HM Fitness gym — training area' },
+    { src: 'Assets/img2.png', alt: 'HM Fitness gym — equipment zone' },
+    { src: 'Assets/img3.png', alt: 'HM Fitness gym — workout space' },
+    { src: 'Assets/img4.png', alt: 'HM Fitness gym — fitness floor' },
+    { src: 'Assets/img5.png', alt: 'HM Fitness gym — member area' }
   ];
 
   /* ── Mobile detection ── */
