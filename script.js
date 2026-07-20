@@ -5,13 +5,24 @@
   const PHONE_DISPLAY = '+91 85020 39982';
   const WHATSAPP_URL = 'https://wa.me/918502039982?text=';
 
-  /* Edit image paths here — all .png files in Assets/ */
+  /* Resolve against this script's URL so GitHub Pages project paths work */
+  var ASSET_BASE = (function () {
+    var current = document.currentScript;
+    var src = current && current.src ? current.src : window.location.href;
+    return src.replace(/[?#].*$/, '').replace(/[^/]+$/, '');
+  })();
+
+  function assetUrl(file) {
+    return ASSET_BASE + file;
+  }
+
+  /* Edit image filenames here — files live in Assets/ */
   const GYM_IMAGES = [
-    { src: 'Assets/img1.png', alt: 'HM Fitness gym — training area' },
-    { src: 'Assets/img2.png', alt: 'HM Fitness gym — equipment zone' },
-    { src: 'Assets/img3.png', alt: 'HM Fitness gym — workout space' },
-    { src: 'Assets/img4.png', alt: 'HM Fitness gym — fitness floor' },
-    { src: 'Assets/img5.png', alt: 'HM Fitness gym — member area' }
+    { src: assetUrl('Assets/img1.png'), alt: 'HM Fitness gym — training area' },
+    { src: assetUrl('Assets/img2.png'), alt: 'HM Fitness gym — equipment zone' },
+    { src: assetUrl('Assets/img3.png'), alt: 'HM Fitness gym — workout space' },
+    { src: assetUrl('Assets/img4.png'), alt: 'HM Fitness gym — fitness floor' },
+    { src: assetUrl('Assets/img5.png'), alt: 'HM Fitness gym — member area' }
   ];
 
   /* ── Mobile detection ── */
@@ -28,7 +39,7 @@
     var dotsContainer = document.getElementById(config.dotsId);
     var sliderEl = document.getElementById(config.sliderId);
 
-    if (!track || !GYM_IMAGES.length) return null;
+    if (!track || !sliderEl || !GYM_IMAGES.length) return null;
 
     GYM_IMAGES.forEach(function (image, i) {
       var slide = document.createElement('div');
@@ -48,20 +59,23 @@
     var currentSlide = 0;
     var autoplayInterval;
     var AUTOPLAY_DELAY = config.delay || 4000;
+    var dots = [];
 
-    GYM_IMAGES.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.className = 'slider__dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      dot.setAttribute('role', 'tab');
-      dot.addEventListener('click', function () {
-        goToSlide(i);
-        resetAutoplay();
+    if (dotsContainer) {
+      GYM_IMAGES.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'slider__dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.setAttribute('role', 'tab');
+        dot.addEventListener('click', function () {
+          goToSlide(i);
+          resetAutoplay();
+        });
+        dotsContainer.appendChild(dot);
       });
-      dotsContainer.appendChild(dot);
-    });
-
-    var dots = dotsContainer.querySelectorAll('.slider__dot');
+      dots = dotsContainer.querySelectorAll('.slider__dot');
+    }
 
     function goToSlide(index) {
       currentSlide = (index + slides.length) % slides.length;
@@ -81,8 +95,8 @@
     function nextSlide() { goToSlide(currentSlide + 1); }
     function prevSlide() { goToSlide(currentSlide - 1); }
 
-    prevBtn.addEventListener('click', function () { prevSlide(); resetAutoplay(); });
-    nextBtn.addEventListener('click', function () { nextSlide(); resetAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prevSlide(); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { nextSlide(); resetAutoplay(); });
 
     function startAutoplay() {
       autoplayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
@@ -131,28 +145,53 @@
     });
   }
 
+  /* ── Sliders & gallery (init first so a later error cannot block images) ── */
+  initSlider({
+    trackId: 'heroSliderTrack',
+    prevId: 'heroSliderPrev',
+    nextId: 'heroSliderNext',
+    dotsId: 'heroSliderDots',
+    sliderId: 'heroSlider',
+    delay: 4500
+  });
+
+  var gallerySlider = initSlider({
+    trackId: 'gallerySliderTrack',
+    prevId: 'gallerySliderPrev',
+    nextId: 'gallerySliderNext',
+    dotsId: 'gallerySliderDots',
+    sliderId: 'gallerySlider',
+    delay: 5000
+  });
+
+  buildGalleryGrid(gallerySlider);
+
   /* ── Navbar ── */
   var navbar = document.getElementById('navbar');
   var navToggle = document.getElementById('navToggle');
   var navMenu = document.getElementById('navMenu');
 
-  window.addEventListener('scroll', function () {
-    navbar.classList.toggle('navbar--scrolled', window.scrollY > 20);
-  }, { passive: true });
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
 
-  navToggle.addEventListener('click', function () {
-    var isOpen = navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  navMenu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navMenu.classList.remove('active');
-      navToggle.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
     });
-  });
+
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   /* ── Call Us button ── */
   var callModal = document.getElementById('callModal');
@@ -162,12 +201,14 @@
   var copyFeedback = document.getElementById('copyFeedback');
 
   function openCallModal() {
+    if (!callModal) return;
     callModal.classList.add('active');
     callModal.setAttribute('aria-hidden', 'false');
-    copyFeedback.textContent = '';
+    if (copyFeedback) copyFeedback.textContent = '';
   }
 
   function closeCallModal() {
+    if (!callModal) return;
     callModal.classList.remove('active');
     callModal.setAttribute('aria-hidden', 'true');
   }
@@ -185,29 +226,32 @@
     if (btn) btn.addEventListener('click', handleCallClick);
   });
 
-  callModalClose.addEventListener('click', closeCallModal);
-  callModalBackdrop.addEventListener('click', closeCallModal);
+  if (callModalClose) callModalClose.addEventListener('click', closeCallModal);
+  if (callModalBackdrop) callModalBackdrop.addEventListener('click', closeCallModal);
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && callModal.classList.contains('active')) {
+    if (e.key === 'Escape' && callModal && callModal.classList.contains('active')) {
       closeCallModal();
     }
   });
 
-  copyPhoneBtn.addEventListener('click', function () {
-    navigator.clipboard.writeText(PHONE_DISPLAY).then(function () {
-      copyFeedback.textContent = 'Number copied to clipboard!';
-      setTimeout(function () { copyFeedback.textContent = ''; }, 2500);
-    }).catch(function () {
-      copyFeedback.textContent = PHONE_DISPLAY;
+  if (copyPhoneBtn) {
+    copyPhoneBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(PHONE_DISPLAY).then(function () {
+        if (copyFeedback) copyFeedback.textContent = 'Number copied to clipboard!';
+        setTimeout(function () { if (copyFeedback) copyFeedback.textContent = ''; }, 2500);
+      }).catch(function () {
+        if (copyFeedback) copyFeedback.textContent = PHONE_DISPLAY;
+      });
     });
-  });
+  }
 
   /* ── Jump nav active state ── */
   var jumpLinks = document.querySelectorAll('.jump-nav__link');
   var sections = ['about', 'plans', 'gallery', 'contact'];
 
   function updateActiveNav() {
+    if (!navbar) return;
     var scrollPos = window.scrollY + navbar.offsetHeight + 80;
     var current = sections[0];
 
@@ -243,27 +287,6 @@
   } else {
     fadeEls.forEach(function (el) { el.classList.add('visible'); });
   }
-
-  /* ── Sliders & gallery ── */
-  initSlider({
-    trackId: 'heroSliderTrack',
-    prevId: 'heroSliderPrev',
-    nextId: 'heroSliderNext',
-    dotsId: 'heroSliderDots',
-    sliderId: 'heroSlider',
-    delay: 4500
-  });
-
-  var gallerySlider = initSlider({
-    trackId: 'gallerySliderTrack',
-    prevId: 'gallerySliderPrev',
-    nextId: 'gallerySliderNext',
-    dotsId: 'gallerySliderDots',
-    sliderId: 'gallerySlider',
-    delay: 5000
-  });
-
-  buildGalleryGrid(gallerySlider);
 
   /* ── Contact form → WhatsApp ── */
   var contactForm = document.getElementById('contactForm');
