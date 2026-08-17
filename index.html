@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HM Fitness — your gym for strength, cardio, and personalized coaching. Join us today.">
   <title>HM Fitness | Your Gym</title>
+  <link rel="icon" href="Assets/Images/gym-logo/hm-fitness-logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -12,10 +13,33 @@
 </head>
 <body>
 
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="mailto:hmfitness@gmail.com" class="topbar__link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        hmfitness@gmail.com
+      </a>
+      <p class="topbar__welcome">Welcome to HM Fitness</p>
+      <a href="tel:+917597978719" class="topbar__link topbar__link--end">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        +91 75979 78719
+      </a>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <a href="#hero" class="navbar__logo">HM FITNESS</a>
+      <a href="#hero" class="navbar__logo">
+        <img src="Assets/Images/gym-logo/hm-fitness-logo.png" alt="" class="navbar__logo-img" width="48" height="48">
+        <span>HM FITNESS</span>
+      </a>
       <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -32,7 +56,7 @@
     </div>
   </header>
 
-  <!-- Sticky Jump Nav -->
+  <!-- Sticky Jump Nav
   <nav class="jump-nav" id="jumpNav" aria-label="Section navigation">
     <div class="container jump-nav__inner">
       <a href="#about" class="jump-nav__link" data-section="about">About</a>
@@ -40,9 +64,39 @@
       <a href="#gallery" class="jump-nav__link" data-section="gallery">Gallery</a>
       <a href="#contact" class="jump-nav__link" data-section="contact">Contact</a>
     </div>
-  </nav>
+  </nav> -->
 
   <main>
+
+    <!-- Full-width banner slider -->
+    <section
+      class="slider slider--banner"
+      id="bannerSlider"
+      aria-label="HM Fitness featured slideshow"
+      aria-roledescription="carousel"
+      tabindex="0"
+    >
+      <div class="slider__track" id="bannerSliderTrack">
+        <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 5">
+          <img src="https://picsum.photos/seed/hm1/1600/600" alt="HM Fitness featured image 1" width="1600" height="600" loading="eager" decoding="async">
+        </div>
+        <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 5" aria-hidden="true">
+          <img src="https://picsum.photos/seed/hm2/1600/600" alt="HM Fitness featured image 2" width="1600" height="600" loading="eager" decoding="async">
+        </div>
+        <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5" aria-hidden="true">
+          <img src="https://picsum.photos/seed/hm3/1600/600" alt="HM Fitness featured image 3" width="1600" height="600" loading="eager" decoding="async">
+        </div>
+        <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5" aria-hidden="true">
+          <img src="https://picsum.photos/seed/hm4/1600/600" alt="HM Fitness featured image 4" width="1600" height="600" loading="eager" decoding="async">
+        </div>
+        <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5" aria-hidden="true">
+          <img src="https://picsum.photos/seed/hm5/1600/600" alt="HM Fitness featured image 5" width="1600" height="600" loading="eager" decoding="async">
+        </div>
+      </div>
+      <button class="slider__btn slider__btn--prev" id="bannerSliderPrev" aria-label="Previous slide" type="button">&#8249;</button>
+      <button class="slider__btn slider__btn--next" id="bannerSliderNext" aria-label="Next slide" type="button">&#8250;</button>
+      <div class="slider__dots" id="bannerSliderDots" role="tablist" aria-label="Banner slide navigation"></div>
+    </section>
 
     <!-- Hero -->
     <section class="hero" id="hero">
@@ -100,52 +154,6 @@
           </article>
         </div>
 
-        <div class="about-content fade-in">
-          <div class="about-content__text">
-            <h3 class="about-content__heading">You've got this. And we've got you.</h3>
-            <p>At HM Fitness, your search for a great gym ends here. We offer a clean, motivating space built for real results — whether you're just starting out or pushing for your next PR.</p>
-            <p>With certified trainers, personalized guidance, and a welcoming community, fitness fits seamlessly into your everyday life. No franchises, no distractions — just one focused gym dedicated to your progress.</p>
-          </div>
-          <div class="amenities-grid">
-            <div class="amenity-card">
-              <h4 class="amenity-card__title">Cardio</h4>
-              <ul>
-                <li>Treadmills</li>
-                <li>Exercise Cycles</li>
-                <li>Rowing Machines</li>
-                <li>Elliptical Cross-trainers</li>
-              </ul>
-            </div>
-            <div class="amenity-card">
-              <h4 class="amenity-card__title amenity-card__title--alt">Strength</h4>
-              <ul>
-                <li>Barbells &amp; Dumbbells</li>
-                <li>Squat Racks</li>
-                <li>Plate Loaded Machines</li>
-                <li>Free Weights</li>
-              </ul>
-            </div>
-            <div class="amenity-card">
-              <h4 class="amenity-card__title">Functional</h4>
-              <ul>
-                <li>Kettlebells</li>
-                <li>Battle Ropes</li>
-                <li>TRX &amp; Resistance Bands</li>
-                <li>Plyometric Boxes</li>
-              </ul>
-            </div>
-            <div class="amenity-card">
-              <h4 class="amenity-card__title amenity-card__title--alt">Amenities</h4>
-              <ul>
-                <li>Personal Training</li>
-                <li>Group Classes</li>
-                <li>Separate Bathrooms</li>
-                <li>Space for Belongings</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <div class="hours-card fade-in">
           <h3 class="hours-card__heading">Gym Hours</h3>
           <p class="hours-card__note">Stop in during office hours to talk to our team about membership options.</p>
@@ -156,6 +164,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Membership Plans -->
     <section class="section section--darker" id="plans">
@@ -342,7 +351,10 @@
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <span class="footer__logo">HM FITNESS</span>
+        <span class="footer__logo">
+          <img src="Assets/Images/gym-logo/hm-fitness-logo.png" alt="" class="footer__logo-img" width="56" height="56">
+          <span>HM FITNESS</span>
+        </span>
         <p>Your gym for strength, cardio, and real results. One location, one community.</p>
       </div>
       <div class="footer__links">
@@ -382,6 +394,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

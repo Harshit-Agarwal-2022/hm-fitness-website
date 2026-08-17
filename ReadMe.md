@@ -1,6 +1,6 @@
 # 🏋️ HM Fitness Website
 
-A modern, responsive website for **HM Fitness Gym**, a local gym located in **Pratap Nagar, Jaipur, Rajasthan**.
+A modern, responsive website for **HM Fitness Gym**, a gym located in **Pratap Nagar, Jaipur, Rajasthan**.
 
 The website is designed to showcase the gym, membership plans, facilities, and provide an easy way for potential members to get in touch through WhatsApp or phone.
 
