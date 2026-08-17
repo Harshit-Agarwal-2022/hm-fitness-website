@@ -577,6 +577,79 @@ button {
 }
 
 /* ========================================
+   Training Styles
+   ======================================== */
+.training-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.training-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 48px 24px 32px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.training-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+}
+
+.training-card:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+.training-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(245, 179, 1, 0.15);
+  color: var(--accent-primary);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  transition: background var(--transition), color var(--transition);
+}
+
+.training-card:hover .training-card__tag {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+
+.training-card__icon {
+  width: clamp(140px, 28vw, 180px);
+  height: clamp(140px, 28vw, 180px);
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.training-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.training-card__desc {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+/* ========================================
    Hours Card
    ======================================== */
 .hours-card {
@@ -1247,6 +1320,10 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .training-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .plans-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1307,6 +1384,10 @@ button {
     aspect-ratio: 3 / 4;
     min-height: 480px;
     max-height: 580px;
+  }
+
+  .training-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .plans-grid {
