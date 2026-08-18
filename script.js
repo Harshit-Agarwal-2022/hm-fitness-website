@@ -16,13 +16,20 @@
     return ASSET_BASE + file;
   }
 
-  /* Edit image filenames here — files live in Assets/ */
+  /* Gym premises photos shared by the hero slider and gallery */
   const GYM_IMAGES = [
-    { src: assetUrl('Assets/img1.png'), alt: 'HM Fitness gym — training area' },
-    { src: assetUrl('Assets/img2.png'), alt: 'HM Fitness gym — equipment zone' },
-    { src: assetUrl('Assets/img3.png'), alt: 'HM Fitness gym — workout space' },
-    { src: assetUrl('Assets/img4.png'), alt: 'HM Fitness gym — fitness floor' },
-    { src: assetUrl('Assets/img5.png'), alt: 'HM Fitness gym — member area' }
+    { src: assetUrl('Assets/Images/gym-premises/img_1.jpeg'), alt: 'HM Fitness gym premises photo 1' },
+    { src: assetUrl('Assets/Images/gym-premises/img_2.jpeg'), alt: 'HM Fitness gym premises photo 2' },
+    { src: assetUrl('Assets/Images/gym-premises/img_3.jpeg'), alt: 'HM Fitness gym premises photo 3' },
+    { src: assetUrl('Assets/Images/gym-premises/img_4.jpeg'), alt: 'HM Fitness gym premises photo 4' },
+    { src: assetUrl('Assets/Images/gym-premises/img_5.jpeg'), alt: 'HM Fitness gym premises photo 5' },
+    { src: assetUrl('Assets/Images/gym-premises/img_6.jpeg'), alt: 'HM Fitness gym premises photo 6' },
+    { src: assetUrl('Assets/Images/gym-premises/img_7.jpeg'), alt: 'HM Fitness gym premises photo 7' },
+    { src: assetUrl('Assets/Images/gym-premises/img_8.jpeg'), alt: 'HM Fitness gym premises photo 8' },
+    { src: assetUrl('Assets/Images/gym-premises/img_9.jpeg'), alt: 'HM Fitness gym premises photo 9' },
+    { src: assetUrl('Assets/Images/gym-premises/img_10.jpeg'), alt: 'HM Fitness gym premises photo 10' },
+    { src: assetUrl('Assets/Images/gym-premises/img_11.jpeg'), alt: 'HM Fitness gym premises photo 11' },
+    { src: assetUrl('Assets/Images/gym-premises/img_12.jpeg'), alt: 'HM Fitness gym premises photo 12' }
   ];
 
   /* ── Mobile detection ── */
