@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  const PHONE_NUMBER = '+917045292099';
-  const PHONE_DISPLAY = '+91 70452 92099';
-  const WHATSAPP_URL = 'https://wa.me/917045292099?text=';
+  const PHONE_NUMBER = '+917597978719';
+  const PHONE_DISPLAY = '+91 75979 78719';
+  const WHATSAPP_URL = 'https://wa.me/917597978719?text=';
 
   /* Resolve against this script's URL so GitHub Pages project paths work */
   var ASSET_BASE = (function () {
