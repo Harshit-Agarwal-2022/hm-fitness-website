@@ -408,4 +408,36 @@
     });
   });
 
+  /* ── Floating WhatsApp Button (Mobile vs Desktop) ── */
+  var whatsappBtn = document.getElementById('whatsapp-btn');
+  if (whatsappBtn) {
+    var WA_NUMBER = '917597978719';
+    var WA_MSG = 'Hi HM Fitness! I would like to inquire about membership and training programs.';
+    var encodedMsg = encodeURIComponent(WA_MSG);
+
+    var mobileUrl = 'whatsapp://send?phone=' + WA_NUMBER + '&text=' + encodedMsg;
+    var webUrl = 'https://web.whatsapp.com/send?phone=' + WA_NUMBER + '&text=' + encodedMsg;
+    var fallbackUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodedMsg;
+
+    // Set initial href for crawlers/direct clicks
+    if (isMobileDevice()) {
+      whatsappBtn.href = mobileUrl;
+    } else {
+      whatsappBtn.href = webUrl;
+    }
+
+    whatsappBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (isMobileDevice()) {
+        // Try opening native WhatsApp app with fallback to web/wa.me
+        window.location.href = mobileUrl;
+        setTimeout(function () {
+          window.location.href = fallbackUrl;
+        }, 1200);
+      } else {
+        window.open(webUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+  }
+
 })();
