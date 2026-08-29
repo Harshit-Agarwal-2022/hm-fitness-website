@@ -15,10 +15,10 @@ Gym Hours:
 - Sunday: 7:00 AM – 12:00 PM
 
 Membership Plans & Pricing:
-1. 1 Month Plan: ₹2,000 per month (Full gym access, basic fitness assessment)
-2. 3 Month Plan: ₹5,000 (₹1,667/mo, Full gym access, 1 free PT session, save 17%)
-3. 6 Month Plan (Most Popular): ₹8,000 (₹1,333/mo, Full gym access, 3 free PT sessions, diet consultation, save 33%)
-4. 1 Year Plan (Best Value): ₹13,000 (₹1,083/mo, Full gym access, 6 free PT sessions, diet & workout plan, save 46%)
+1. 1 Month Plan: ₹1,500 (Discounted from ₹1,800, full gym access, basic fitness assessment)
+2. 3 Month Plan: ₹4,000 (Discounted from ₹4,500, ₹1,333/mo, full gym access, 1 free PT session, save 11%)
+3. 6 Month Plan (Most Popular): ₹6,000 (Discounted from ₹7,500, ₹1,000/mo, full gym access, 3 free PT sessions, diet consultation, save 20%)
+4. 1 Year Plan (Best Value): ₹9,000 (Discounted from ₹13,000, ₹750/mo, full gym access, 6 free PT sessions, diet & workout plan, save 31%)
 
 Training Styles & Programs:
 - Weight Training: Barbells, dumbbells, squat racks, plate loaded equipment for strength & muscle building
