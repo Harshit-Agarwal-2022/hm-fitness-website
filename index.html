@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -463,23 +463,6 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Chat Widget -->
-  <div class="whatsapp-widget" id="whatsappWidget">
-    <span class="whatsapp-widget__message" id="whatsappWidgetMessage" role="status">
-      Chat with us on WhatsApp
-    </span>
-    <a
-      class="whatsapp-widget__button"
-      id="whatsappWidgetButton"
-      href="https://wa.me/917597978719"
-      aria-label="Chat with HM Fitness on WhatsApp"
-    >
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16.04 3C9.39 3 4 8.29 4 14.82c0 2.3.68 4.54 1.96 6.45L4 28.33l7.29-1.9a12.2 12.2 0 004.75.96h.01c6.64 0 12.04-5.29 12.04-11.82C28.09 9.04 22.69 3 16.04 3zm0 22.39h-.01a10.1 10.1 0 01-5.14-1.38l-.42-.25-4.33 1.13 1.16-4.14-.27-.43A9.67 9.67 0 016 14.82C6 9.39 10.51 5 16.04 5s10.04 4.39 10.04 9.82c0 5.42-4.5 10.57-10.04 10.57zm5.51-7.91c-.3-.15-1.79-.87-2.07-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.28-.46-2.43-1.47a9.02 9.02 0 01-1.68-2.05c-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.68-1.62-.93-2.22-.25-.59-.5-.5-.68-.51h-.58c-.2 0-.53.07-.8.37-.28.3-1.06 1.02-1.06 2.49s1.09 2.89 1.24 3.09c.15.2 2.14 3.21 5.18 4.5.72.31 1.29.49 1.73.63.73.23 1.39.2 1.91.12.58-.08 1.79-.72 2.04-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35z"/>
-      </svg>
-    </a>
-  </div>
-
   <!-- Call Popup (Desktop) -->
   <div class="modal" id="callModal" role="dialog" aria-labelledby="callModalTitle" aria-hidden="true">
     <div class="modal__backdrop" id="callModalBackdrop"></div>
@@ -496,8 +479,9 @@
   <div class="floating-actions" id="floating-actions">
     <!-- WhatsApp Floating Widget -->
     <div class="whatsapp-widget" id="whatsapp-widget">
-      <div class="whatsapp-tooltip" id="whatsapp-tooltip" role="status">
-        Chat on WhatsApp
+      <div class="whatsapp-tooltip" id="whatsapp-tooltip" role="status" aria-live="polite">
+        <span class="chat-tooltip__dot"></span>
+        <span class="whatsapp-tooltip__text">Chat with us on WhatsApp</span>
       </div>
       <a
         href="https://wa.me/917597978719"
@@ -565,7 +549,7 @@
     </form>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
   <script src="chatbot.js?v=1"></script>
 </body>
 </html>

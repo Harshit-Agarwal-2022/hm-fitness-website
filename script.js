@@ -4,7 +4,6 @@
   const PHONE_NUMBER = '+917597978719';
   const PHONE_DISPLAY = '+91 75979 78719';
   const WHATSAPP_URL = 'https://wa.me/917597978719?text=';
-  const WHATSAPP_ENQUIRY_MESSAGE = 'Hi HM Fitness! I would like to enquire about the gym and membership options.';
 
   /* Resolve against this script's URL so GitHub Pages project paths work */
   var ASSET_BASE = (function () {
@@ -354,30 +353,6 @@
     fadeEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ── WhatsApp chat widget ── */
-  var whatsappWidgetButton = document.getElementById('whatsappWidgetButton');
-  var whatsappWidgetMessage = document.getElementById('whatsappWidgetMessage');
-
-  if (whatsappWidgetButton) {
-    var whatsappPhone = PHONE_NUMBER.replace(/\D/g, '');
-    var whatsappText = encodeURIComponent(WHATSAPP_ENQUIRY_MESSAGE);
-
-    if (isMobileDevice()) {
-      whatsappWidgetButton.href = 'whatsapp://send?phone=' + whatsappPhone + '&text=' + whatsappText;
-    } else {
-      whatsappWidgetButton.href = 'https://web.whatsapp.com/send?phone=' + whatsappPhone + '&text=' + whatsappText;
-      whatsappWidgetButton.target = '_blank';
-      whatsappWidgetButton.rel = 'noopener noreferrer';
-    }
-  }
-
-  if (whatsappWidgetMessage) {
-    setTimeout(function () {
-      whatsappWidgetMessage.classList.add('whatsapp-widget__message--hidden');
-      whatsappWidgetMessage.setAttribute('aria-hidden', 'true');
-    }, 5000);
-  }
-
   /* ── Contact form → WhatsApp ── */
   var contactForm = document.getElementById('contactForm');
 
@@ -435,6 +410,21 @@
 
   /* ── Floating WhatsApp Button (Mobile vs Desktop) ── */
   var whatsappBtn = document.getElementById('whatsapp-btn');
+  var whatsappTooltip = document.getElementById('whatsapp-tooltip');
+
+  function showWhatsappTooltip() {
+    if (!whatsappTooltip) return;
+    whatsappTooltip.classList.add('visible');
+    window.setTimeout(function () {
+      whatsappTooltip.classList.add('fadeout');
+      window.setTimeout(function () {
+        whatsappTooltip.style.display = 'none';
+      }, 400);
+    }, 5000);
+  }
+
+  showWhatsappTooltip();
+
   if (whatsappBtn) {
     var WA_NUMBER = '917597978719';
     var WA_MSG = 'Hi HM Fitness! I would like to inquire about membership and training programs.';
