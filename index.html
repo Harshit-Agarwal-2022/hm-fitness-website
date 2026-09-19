@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -79,13 +79,22 @@
     >
       <div class="slider__track" id="bannerSliderTrack">
         <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
-          <img src="Assets/Images/image-slider/img_1.png" alt="HM Fitness women’s membership offer" width="1024" height="318" loading="eager" decoding="async">
+          <picture>
+            <source media="(max-width: 767px)" srcset="Assets/Images/image-slider/mobile/img_1.png" width="896" height="1200">
+            <img src="Assets/Images/image-slider/img_1.png" alt="HM Fitness women’s membership offer" width="1024" height="318" loading="eager" decoding="async">
+          </picture>
         </div>
         <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3" aria-hidden="true">
-          <img src="Assets/Images/image-slider/img_2.png" alt="HM Fitness membership pricing promotion" width="1024" height="318" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 767px)" srcset="Assets/Images/image-slider/mobile/img_2.png" width="896" height="1200">
+            <img src="Assets/Images/image-slider/img_2.png" alt="HM Fitness membership pricing promotion" width="1024" height="318" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="slider__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3" aria-hidden="true">
-          <img src="Assets/Images/image-slider/img_3.png" alt="HM Fitness motivational strength banner" width="1024" height="318" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 767px)" srcset="Assets/Images/image-slider/mobile/img_3.png" width="896" height="1200">
+            <img src="Assets/Images/image-slider/img_3.png" alt="HM Fitness motivational strength banner" width="1024" height="318" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
       <button class="slider__btn slider__btn--prev" id="bannerSliderPrev" aria-label="Previous slide" type="button">&#8249;</button>
